@@ -9,7 +9,7 @@ console.log('Bienvenido al registro de notas')
 for (let i = 0; i< 20; i++) {
     const nombre = prompt(`Ingresar el nombre del estudiante ${i+1}:  `);
     const nota = parseFloat(prompt(`Ingrese la nota de ${nombre}:  `));
-    if (nota <= 0) {
+    if (isNaN(nota) || nota <= 0) {
         console.log('Porfavor ingrese una nota válida');
         i--;
     }
